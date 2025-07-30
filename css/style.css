@@ -1675,9 +1675,11 @@ banner
 }
 @media (max-width: 768px) {
   .mil-banner {
-    background-image: url(../img/hero-mobile.JPG); /* <-- Tu nueva imagen para mobile */
+    background-image: url(../img/hero-mobile.JPG);
+    /* <-- Tu nueva imagen para mobile */
   }
 }
+
 .banner-gradient {
   /* Posiciona el gradiente sobre la imagen */
   position: absolute;
