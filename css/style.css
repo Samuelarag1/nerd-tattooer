@@ -4254,3 +4254,84 @@ html.is-animating .mil-menu-frame {
   z-index: 999;
 
 }
+.mil-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .mil-card-group {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.mil-card {
+  perspective: 1000px;
+  position: relative;
+  height: 100%;
+
+  &.large {
+    height: 280px;
+  }
+
+  &.small {
+    flex: 1;
+    height: 130px;
+  }
+
+  .mil-card-front,
+  .mil-card-back {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  .mil-card-front {
+    z-index: 2;
+  }
+
+  .mil-card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+
+  &:hover .mil-card-front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .mil-card-back {
+    transform: rotateY(360deg);
+    z-index: 2;
+  }
+
+  .mil-icon {
+    font-size: 2rem;
+    align-self: flex-end;
+  }
+}
+
+.mil-card-idea .mil-card-front,
+.mil-card-idea .mil-card-back {
+  background-color: #f7c887;
+}
+
+.mil-card-miedo .mil-card-front,
+.mil-card-miedo .mil-card-back {
+  background-color: #a9d7f7;
+}
+
+.mil-card-cagada .mil-card-front,
+.mil-card-cagada .mil-card-back {
+  background-color: #c9b4f7;
+}
