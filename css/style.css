@@ -4249,7 +4249,7 @@ html.is-animating .mil-menu-frame {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
-.hero-image{
+/* .hero-image{
   background-color: rgba(228, 0, 171, 0.467);
   z-index: 999;
 
@@ -4334,4 +4334,4 @@ html.is-animating .mil-menu-frame {
 .mil-card-cagada .mil-card-front,
 .mil-card-cagada .mil-card-back {
   background-color: #c9b4f7;
-}
+} */
