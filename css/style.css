@@ -76,8 +76,9 @@ body {
   color: rgba(0, 0, 0, 0.5);
   line-height: 150%;
   -ms-scroll-chaining: none;
-  overscroll-behavior: none;
+  overscroll-behavior: smooth;
 }
+
 
 @media screen and (max-width: 768px) {
 
@@ -922,6 +923,7 @@ backgrounds
   /* -webkit-backdrop-filter: invert(100%);
   backdrop-filter: invert(100%); */
 }
+
 .mil-dark-bg-2:before {
   content: "";
   width: 100%;
@@ -932,6 +934,7 @@ backgrounds
   -webkit-backdrop-filter: invert(100%);
   backdrop-filter: invert(100%);
 }
+
 .mil-dark-bg .mi-invert-fix {
   height: 100%;
   position: relative;
@@ -993,6 +996,14 @@ spaces
     margin-bottom: 90px;
   }
 }
+.mil-mt-5 {
+  margin-top: 5px;
+}
+
+.mil-mt-10 {
+  margin-top: 10px;
+}
+
 
 .mil-mt-suptitle-offset {
   margin-top: 70px;
@@ -1889,10 +1900,10 @@ menu
 
 banner
 
-------------------------------------------- */
-.mil-banner {
+------------------------------------------- */.mil-banner {
   height: 100vh;
-  background-image: url(../img/hero.JPG);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), transparent),
+                    url(../img/hero.JPG);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1901,7 +1912,8 @@ banner
 
 @media (max-width: 768px) {
   .mil-banner {
-    background-image: url(../img/hero-mobile.JPG);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), transparent),
+                      url(../img/hero-mobile.JPG);
   }
 }
 
@@ -4847,91 +4859,6 @@ html.is-animating .mil-menu-frame {
   color: black;
 }
 
-/* .hero-image{
-  background-color: rgba(228, 0, 171, 0.467);
-  z-index: 999;
-}
-.mil-cards-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-
-  .mil-card-group {
-    display: flex;
-    gap: 1.5rem;
-  }
-}
-
-.mil-card {
-  perspective: 1000px;
-  position: relative;
-  height: 100%;
-
-  &.large {
-    height: 280px;
-  }
-
-  &.small {
-    flex: 1;
-    height: 130px;
-  }
-
-  .mil-card-front,
-  .mil-card-back {
-    padding: 2rem;
-    border-radius: 1.5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transition: transform 0.6s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 1.1rem;
-    color: #fff;
-  }
-
-  .mil-card-front {
-    z-index: 2;
-  }
-
-  .mil-card-back {
-    transform: rotateY(180deg);
-    z-index: 1;
-  }
-
-  &:hover .mil-card-front {
-    transform: rotateY(180deg);
-  }
-
-  &:hover .mil-card-back {
-    transform: rotateY(360deg);
-    z-index: 2;
-  }
-
-  .mil-icon {
-    font-size: 2rem;
-    align-self: flex-end;
-  }
-}
-
-.mil-card-idea .mil-card-front,
-.mil-card-idea .mil-card-back {
-  background-color: #f7c887;
-}
-
-.mil-card-miedo .mil-card-front,
-.mil-card-miedo .mil-card-back {
-  background-color: #a9d7f7;
-}
-
-.mil-card-cagada .mil-card-front,
-.mil-card-cagada .mil-card-back {
-  background-color: #c9b4f7;
-}
 
 /* -------------------------------------------
 
@@ -4978,11 +4905,11 @@ Testimonios Section
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 2.5rem;
   margin: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .mil-testimonial-card::before {
@@ -5020,6 +4947,11 @@ Testimonios Section
 
 .mil-testimonial-content {
   text-align: center;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mil-stars {
@@ -5099,6 +5031,157 @@ Testimonios Section
   font-size: 1.2rem;
 }
 
+/* Flip Animation Styles */
+.mil-testimonial-card {
+  perspective: 1000px;
+  height: 400px;
+  cursor: pointer;
+  border: 1px solid #1a1a1a;
+}
+
+.mil-testimonial-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.mil-testimonial-card.flipped .mil-testimonial-inner {
+  transform: rotateY(180deg);
+}
+
+.mil-testimonial-front,
+.mil-testimonial-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 2.5rem;
+  border-radius: 20px;
+}
+
+.mil-testimonial-front {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mil-testimonial-back {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transform: rotateY(180deg);
+}
+
+.mil-work-done {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mil-work-done h4 {
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.mil-work-image {
+  margin-bottom: 1.5rem;
+}
+
+.mil-work-image img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mil-work-description {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.mil-work-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.mil-work-details span {
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+/* -------------------------------------------
+
+Footer Section
+
+------------------------------------------- */
+.mil-footer-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.mil-footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
+}
+
+.mil-footer-section h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.mil-footer-section p {
+  color: #cccccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.mil-footer-section .mil-btn {
+  background: #ff9800;
+  color: #ffffff;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+.mil-footer-section .mil-btn:hover {
+  background: #ff5722;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 152, 0, 0.3);
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /* -------------------------------------------
 
 FAQs Section
@@ -5171,7 +5254,7 @@ FAQs Section
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ff9800;
+  background: #fda31b;
   border-radius: 50%;
   color: #ffffff;
   font-size: 1rem;
@@ -5180,7 +5263,7 @@ FAQs Section
 }
 
 .mil-faq-header:hover .mil-faq-icon {
-  background: #ff5722;
+  background: #FF9800;
   transform: scale(1.1);
 }
 
@@ -5240,24 +5323,33 @@ Responsive Design
 
 ------------------------------------------- */
 @media (max-width: 1200px) {
+
   .mil-testimonials-section h2,
-  .mil-faqs-section h2 {
+  .mil-faqs-section h2,
+  .mil-footer-section h2 {
     font-size: 2.5rem;
   }
 
   .mil-faq-cta {
     padding: 1.5rem;
   }
+
+  .mil-footer-section .mil-btn {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 992px) {
+
   .mil-testimonials-section h2,
-  .mil-faqs-section h2 {
+  .mil-faqs-section h2,
+  .mil-footer-section h2 {
     font-size: 2.2rem;
   }
 
   .mil-testimonial-card {
-    padding: 2rem;
+    height: 350px;
     margin: 0.5rem;
   }
 
@@ -5276,11 +5368,22 @@ Responsive Design
   .mil-faq-cta p {
     font-size: 1.1rem;
   }
+
+  .mil-footer-section p {
+    font-size: 1rem;
+  }
+
+  .mil-footer-section .mil-btn {
+    padding: 1.125rem 2.25rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
+
   .mil-testimonials-section h2,
-  .mil-faqs-section h2 {
+  .mil-faqs-section h2,
+  .mil-footer-section h2 {
     font-size: 2rem;
   }
 
@@ -5290,11 +5393,24 @@ Responsive Design
   }
 
   .mil-testimonial-card {
-    padding: 1.5rem;
+    height: 300px;
     margin: 0.25rem;
   }
 
   .mil-testimonial-text {
+    font-size: 1rem;
+  }
+
+  .mil-testimonial-card {
+    height: 300px;
+  }
+
+  .mil-footer-section p {
+    font-size: 1rem;
+  }
+
+  .mil-footer-section .mil-btn {
+    padding: 1.125rem 2.25rem;
     font-size: 1rem;
   }
 
@@ -5342,8 +5458,10 @@ Responsive Design
 }
 
 @media (max-width: 576px) {
+
   .mil-testimonials-section h2,
-  .mil-faqs-section h2 {
+  .mil-faqs-section h2,
+  .mil-footer-section h2 {
     font-size: 1.8rem;
   }
 
@@ -5399,11 +5517,22 @@ Responsive Design
   .mil-testimonials-slider {
     padding: 1rem 0;
   }
+
+  .mil-footer-section p {
+    font-size: 1rem;
+  }
+
+  .mil-footer-section .mil-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
+
   .mil-testimonials-section h2,
-  .mil-faqs-section h2 {
+  .mil-faqs-section h2,
+  .mil-footer-section h2 {
     font-size: 1.6rem;
   }
 
@@ -5413,7 +5542,7 @@ Responsive Design
   }
 
   .mil-testimonial-card {
-    padding: 1rem;
+    height: 300px;
   }
 
   .mil-testimonial-text {
@@ -5441,5 +5570,14 @@ Responsive Design
   .mil-faq-cta .mil-btn {
     padding: 0.625rem 1rem;
     font-size: 0.8rem;
+  }
+
+  .mil-footer-section p {
+    font-size: 0.9rem;
+  }
+
+  .mil-footer-section .mil-btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.9rem;
   }
 }

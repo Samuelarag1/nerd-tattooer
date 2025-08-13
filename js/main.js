@@ -710,7 +710,7 @@ $(function () {
           spaceBetween: 30,
         },
         1200: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 30,
         },
       },
@@ -990,6 +990,97 @@ $(function () {
         ease: "sine",
       });
     });
+
+    /***************************
+
+        testimonials slider
+
+        ***************************/
+    var testimonialsSwiper = new Swiper(
+      ".mil-testimonials-slider .swiper-container",
+      {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        speed: 800,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      }
+    );
+
+    /***************************
+
+        FAQs accordion
+
+        ***************************/
+    $(".mil-faq-header").on("click", function () {
+      const faqId = $(this).data("faq");
+      const $content = $(`.mil-faq-content[data-faq="${faqId}"]`);
+      const $icon = $(this).find(".mil-faq-icon i");
+
+      // Cerrar todos los otros FAQs
+      $(".mil-faq-content").not($content).removeClass("active");
+      $(".mil-faq-icon i")
+        .not($icon)
+        .removeClass("fa-slash")
+        .addClass("fa-plus");
+
+      // Toggle del FAQ actual
+      if ($content.hasClass("active")) {
+        $content.removeClass("active");
+        $icon.removeClass("fa-slash").addClass("fa-plus");
+      } else {
+        $content.addClass("active");
+        $icon.removeClass("fa-plus").addClass("fa-slash");
+      }
+    });
+
+    // Abrir el primer FAQ por defecto
+    $(".mil-faq-item:first-child .mil-faq-content").addClass("active");
+    $(".mil-faq-item:first-child .mil-faq-icon i")
+      .removeClass("fa-plus")
+      .addClass("fa-slash");
+
+    /***************************
+
+      Testimonial card flip
+
+      ***************************/
+    $(".mil-testimonial-card").on("click", function () {
+      const $card = $(this);
+      const $inner = $card.find(".mil-testimonial-inner");
+
+      // Toggle flip class
+      $card.toggleClass("flipped");
+
+      // Add smooth transition
+      $inner.css("transition", "transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)");
+    });
+
     /***************************
 
         main menu
@@ -1302,5 +1393,21 @@ $(function () {
     $(".mil-faq-item:first-child .mil-faq-icon i")
       .removeClass("fa-plus")
       .addClass("fa-slash");
+
+    /***************************
+
+      Testimonial card flip
+
+      ***************************/
+    $(".mil-testimonial-card").on("click", function () {
+      const $card = $(this);
+      const $inner = $card.find(".mil-testimonial-inner");
+
+      // Toggle flip class
+      $card.toggleClass("flipped");
+
+      // Add smooth transition
+      $inner.css("transition", "transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)");
+    });
   });
 });
