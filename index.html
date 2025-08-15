@@ -3,20 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Evitar zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- SEO -->
+    <!-- SEO básico -->
     <title>NerdTattooer | Tatuajes Personalizados y Arte Único</title>
     <meta name="description"
-        content="Tatuajes personalizados, diseñados para tu estilo e historia. Arte único con técnica profesional en Buenos Aires.">
+        content="Tatuajes personalizados, diseñados para tu estilo e historia. Arte único con técnica profesional en Córdoba.">
     <meta name="keywords" content="tatuajes, tatuador, tattoo, diseño personalizado, arte en piel">
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nerdtattooer.com/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <meta name="theme-color" content="#000000">
+
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="img/mstile-150x150.png">
+
     <!-- Open Graph -->
     <meta property="og:title" content="NerdTattooer | Tatuajes Personalizados y Arte Único">
     <meta property="og:description"
-        content="Tatuajes personalizados, diseñados para tu estilo e historia. Arte único con técnica profesional en Buenos Aires.">
+        content="Tatuajes personalizados, diseñados para tu estilo e historia. Arte único con técnica profesional en Córdoba.">
     <meta property="og:image" content="https://nerdtattooer.com/img/og-image.jpg">
     <meta property="og:url" content="https://nerdtattooer.com/">
     <meta property="og:type" content="website">
@@ -25,24 +35,41 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NerdTattooer | Tatuajes Personalizados y Arte Único">
     <meta name="twitter:description"
-        content="Tatuajes personalizados, diseñados para tu estilo e historia. Arte único con técnica profesional en Buenos Aires.">
+        content="Tatuajes personalizados, diseñados para tu estilo e historia. Arte único con técnica profesional en Córdoba.">
     <meta name="twitter:image" content="https://nerdtattooer.com/img/og-image.jpg">
 
-    <!-- Accesibilidad -->
-    <meta name="theme-color" content="#000000">
-    <meta name="format-detection" content="telephone=no">
+    <!-- Structured Data / LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "NerdTattooer",
+      "image": "https://nerdtattooer.com/img/og-image.jpg",
+      "address": {
+        "@type": "X5000",
+        "streetAddress": "",
+        "addressLocality": "Cordoba Capital",
+        "addressCountry": "AR"
+      },
+      "url": "https://nerdtattooer.com/",
+      "telephone": "+54 9 XX XXX XXXX"
+    }
+    </script>
 
-    <!-- bootstrap grid css -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
-    <!-- font awesome css -->
     <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
-    <!-- swiper css -->
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
-    <!-- fancybox css -->
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
-    <!-- ashley scss -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Preload fonts -->
+    <!-- <link rel="preload" href="fonts/tu-fuente.woff2" as="font" type="font/woff2" crossorigin> -->
+
+    <!-- Accesibilidad -->
+    <meta name="format-detection" content="telephone=yes">
 </head>
+
 
 
 <body>
@@ -50,20 +77,9 @@
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
 
-        <!-- cursor -->
-        <!-- <div class="mil-ball">
-            <span class="mil-icon-1">
-                <svg viewBox="0 0 128 128">
-                    <path
-                        d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
-                </svg>
-            </span>
-            <div class="mil-more-text">More</div>
-            <div class="mil-choose-text">Сhoose</div>
-        </div> -->
-        <!-- cursor end -->
 
         <!-- preloader -->
+
         <!-- <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
@@ -79,6 +95,7 @@
                 </div>
             </div>
         </div> -->
+
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -106,51 +123,16 @@
                                 <ul>
                                     <li class="mil-has-children mil-active">
                                         <a href="#inicio">Inicio</a>
-                                        <!--
-                                        <ul>
-                                            <li><a href="index.html">Landing page</a></li>
-                                            <li><a href="home-2.html">Personal</a></li>
-                                            <li><a href="portfolio-3.html">Portfolio slider</a></li>
-                                        </ul>
-                                        -->
                                     </li>
                                     <li class="mil-has-children">
                                         <a href="#metodologia">Metodología</a>
-                                        <!--
-                                        <ul>
-                                            <li><a href="portfolio-1.html">Grid type 1</a></li>
-                                            <li><a href="portfolio-2.html">Grid type 2</a></li>
-                                            <li><a href="portfolio-3.html">Slider</a></li>
-                                        </ul>
-                                        -->
                                     </li>
                                     <li class="mil-has-children">
                                         <a href="#servicios">Servicios</a>
-                                        <!--
-                                        <ul>
-                                            <li><a href="service.html">Services List</a></li>
-                                            <li><a href="service.html">Single service</a></li>
-                                        </ul>
-                                        -->
                                     </li>
-                                    <!--
-                                <li class="mil-has-children">
-                                    <a href="#.">Newsletter</a>
-                                    <ul>
-                                        <li><a href="blog.html">Blog List</a></li>
-                                        <li><a href="publication.html">Publication</a></li>
-                                    </ul>
-                                    -->
                                     </li>
                                     <li class="mil-has-children">
                                         <a href="#.">Other pages</a>
-                                        <!--
-                                            <ul>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                        </ul>
-                                        -->
                                     </li>
                                 </ul>
                             </nav>
@@ -233,7 +215,7 @@
 
         <!-- curtain -->
         <div class="mil-curtain"></div>
-        <!-- curtain end -->
+
 
         <!-- frame -->
         <div class="mil-frame">
@@ -252,7 +234,6 @@
                 </div>
             </div>
         </div>
-        <!-- frame end -->
 
         <!-- content -->
         <div class="mil-content">
@@ -321,314 +302,146 @@
                         </div>
                     </div>
                 </section>
-                <!-- banner end -->
 
 
                 <!-- Te pasa esto? -->
-<section class="mil-dark-bg">
-  <div>
-    <div class="mil-animation-frame">
-      <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.2" data-value-2="1.3"
-        style="top: 220px; right: -80px"></div>
-      <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1"
-        style="left: 120px"></div>
-    </div>
+                <section class="mil-dark-bg">
+                    <div>
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.2" data-value-2="1.3"
+                                style="top: 220px; right: -80px"></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1"
+                                style="left: 120px"></div>
+                        </div>
 
-    <div class="row g-0 align-items-center" style="min-height: 100vh;">
+                        <div class="row g-0 align-items-center" style="min-height: 100vh;">
 
-      <!-- Texto primero en mobile -->
-      <div class="col-12 col-lg-6 p-5 order-1 order-lg-2">
-        <div class="mil-mb-90">
-          <h2 class="mil-up mil-mb-60">¿Te pasa esto?</h2>
-          <p class="mil-up mil-mb-60">
-            Sabemos que tatuarse puede generar muchas dudas. Es normal sentir incertidumbre sobre el diseño, el lugar o si será la decisión correcta.
-          </p>
-          <div class="mil-up">
-            <a href="#" class="mil-services-button mil-button mil-arrow-place">
-              <span>Contame tu historia</span>
-            </a>
-          </div>
-        </div>
-      </div>
+                            <!-- Texto primero en mobile -->
+                            <div class="col-12 col-lg-6 p-5 order-1 order-lg-2">
+                                <div class="mil-mb-90">
+                                    <h2 class="mil-up mil-mb-60">¿Te pasa esto?</h2>
+                                    <p class="mil-up mil-mb-60">
+                                        Sabemos que tatuarse puede generar muchas dudas. Es normal sentir incertidumbre
+                                        sobre el diseño, el lugar o si será la decisión correcta.
+                                    </p>
+                                    <div class="mil-up">
+                                        <a href="#" class="mil-services-button mil-button mil-arrow-place">
+                                            <span>Contame tu historia</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 
-      <!-- Carrusel primero en desktop -->
-      <div class="col-12 col-lg-6 p-0 order-2 order-lg-1">
-        <div class="carousel-container">
-          <div class="carousel-slide active" style="background-image: url('./img/situation/1.jpg');">
-            <div class="carousel-overlay">
-              <h3>Tengo una idea, pero no sé cómo tatuar</h3>
-              <p>No quiero hacerme algo que no me represente. No sé si elegir bien el diseño, el tamaño o el lugar del cuerpo.</p>
-            </div>
-          </div>
-          <div class="carousel-slide" style="background-image: url('./img/situation/2.jpg');">
-            <div class="carousel-overlay">
-              <h3>Tengo que arreglar una cagada que me hice</h3>
-              <p>Me hice algo hace años y ahora siento que no tiene nada que ver conmigo. Quiero cubrirlo, pero no sé qué se puede hacer.</p>
-            </div>
-          </div>
-          <div class="carousel-slide" style="background-image: url('./img/situation/3.jpg');">
-            <div class="carousel-overlay">
-              <h3>Me da miedo que no quede como quiero</h3>
-              <p>Veo muchos tatuadores en redes, pero no sé quién realmente escucha lo que quiero o tiene la experiencia.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+                            <!-- Carrusel primero en desktop -->
+                            <div class="col-12 col-lg-6 p-0 order-2 order-lg-1">
+                                <div class="carousel-container">
+                                    <div class="carousel-slide active"
+                                        style="background-image: url('./img/situation/1.jpg');">
+                                        <div class="carousel-overlay">
+                                            <h3>Tengo una idea, pero no sé cómo tatuar</h3>
+                                            <p>No quiero hacerme algo que no me represente. No sé si elegir bien el
+                                                diseño, el tamaño o el lugar del cuerpo.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-slide" style="background-image: url('./img/situation/2.jpg');">
+                                        <div class="carousel-overlay">
+                                            <h3>Tengo que arreglar una cagada que me hice</h3>
+                                            <p>Me hice algo hace años y ahora siento que no tiene nada que ver conmigo.
+                                                Quiero cubrirlo, pero no sé qué se puede hacer.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-slide" style="background-image: url('./img/situation/3.jpg');">
+                                        <div class="carousel-overlay">
+                                            <h3>Me da miedo que no quede como quiero</h3>
+                                            <p>Veo muchos tatuadores en redes, pero no sé quién realmente escucha lo que
+                                                quiero o tiene la experiencia.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-    </div>
-  </div>
-</section>
+                        </div>
+                    </div>
+                </section>
 
-<style>
-.carousel-container {
-  position: relative;
-  height: 45vh; /* Menos alto en mobile para que se vea el texto */
-  width: 100%;
-  overflow: hidden;
-}
+                <style>
+                    .carousel-container {
+                        position: relative;
+                        height: 45vh;
+                        /* Menos alto en mobile para que se vea el texto */
+                        width: 100%;
+                        overflow: hidden;
+                    }
 
-.carousel-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+                    .carousel-slide {
+                        position: absolute;
+                        inset: 0;
+                        background-size: cover;
+                        background-position: center;
+                        opacity: 0;
+                        transition: opacity 1s ease-in-out;
+                    }
 
-.carousel-slide.active {
-  opacity: 1;
-}
+                    .carousel-slide.active {
+                        opacity: 1;
+                    }
 
-.carousel-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 30%, transparent 100%);
-  color: #fff;
-}
+                    .carousel-overlay {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        padding: 20px;
+                        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, transparent 100%);
+                        color: #fff;
+                    }
 
-.carousel-overlay h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: white;
-}
+                    .carousel-overlay h3 {
+                        margin: 0 0 8px 0;
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        color: white;
+                    }
 
-.carousel-overlay p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #d3d3d3;
-}
+                    .carousel-overlay p {
+                        margin: 0;
+                        font-size: 0.95rem;
+                        color: #d3d3d3;
+                    }
 
-/* Desktop */
-@media (min-width: 992px) {
-  .carousel-container {
-    height: 100vh;
-  }
-  .carousel-overlay h3 {
-    font-size: 2rem;
-  }
-  .carousel-overlay p {
-    font-size: 1.1rem;
-  }
-}
-</style>
+                    /* Desktop */
+                    @media (min-width: 992px) {
+                        .carousel-container {
+                            height: 100vh;
+                        }
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".carousel-slide");
-  const totalSlides = slides.length;
+                        .carousel-overlay h3 {
+                            font-size: 2rem;
+                        }
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-    });
-  }
+                        .carousel-overlay p {
+                            font-size: 1.1rem;
+                        }
+                    }
+                </style>
 
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-  }, 4000);
-});
-</script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        let currentSlide = 0;
+                        const slides = document.querySelectorAll(".carousel-slide");
+                        const totalSlides = slides.length;
 
+                        function showSlide(index) {
+                            slides.forEach((slide, i) => {
+                                slide.classList.toggle("active", i === index);
+                            });
+                        }
 
-
-
-
-                <!-- Te pasa esto? end -->
-
-                <!-- CSS para efecto flip de cards -->
-                <!-- <style>
-  .mil-flip-card {
-    background-color: transparent;
-    perspective: 1000px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-.mil-flip-card:hover {
-    transform: scale(1.05);
-}
-
-/* Sombra de puntos */
-.mil-dotted-shadow::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 3px 3px, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
-    background-size: 8px 8px;
-    border-radius: 25px;
-    z-index: -1;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.mil-flip-card:hover.mil-dotted-shadow::before {
-    opacity: 0.9;
-    transform: translate(3px, 3px);
-}
-
-.mil-flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    z-index: 1;
-}
-
-.mil-flip-card:hover .mil-flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.mil-flip-card-front,
-.mil-flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.mil-flip-card-back {
-    transform: rotateY(180deg);
-}
-
-.mil-card-content {
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.mil-card-title {
-    font-size: 0.9rem; /* más pequeño para mobile */
-    font-weight: 600;
-    color: #333;
-    margin: 0;
-    line-height: 1.3;
-}
-
-.mil-card-description {
-    font-size: 0.8rem; /* más pequeño y limpio */
-    color: #fff;
-    margin: 0;
-    line-height: 1.4;
-    font-weight: 400;
-}
-
-.mil-icon {
-    display: block;
-}
-
-/* Triángulo en Mobile */
-@media (max-width: 767px) {
-    .mil-cards-wrapper {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        margin: 0 auto !important;
-        max-width: 100% !important;
-    }
-
-    /* Card grande arriba */
-    .mil-flip-card.mil-card-large {
-        width: 300px !important;
-        height: 230px !important;
-        margin: 0 auto !important;
-    }
-
-    /* Cards medianas abajo en fila */
-    .mil-cards-column {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: flex-start !important;
-        gap: 20px !important;
-    }
-
-    /* Mediana izquierda */
-    .mil-card-medium:first-child {
-        width: 160px !important;
-        height: 170px !important;
-    }
-
-    /* Mediana derecha con desplazamiento */
-    .mil-card-medium:last-child {
-        width: 160px !important;
-        height: 170px !important;
-        margin-top: 25px !important;
-    }
-
-    /* Orden: cards arriba, CTA abajo */
-    .row.align-items-center {
-        flex-direction: column !important;
-    }
-    .col-lg-6:first-child {
-        order: 1;
-        margin-bottom: 30px;
-    }
-    .col-lg-6:last-child {
-        order: 2;
-        text-align: center;
-    }
-    .mil-services-button {
-        margin: 0 auto;
-        display: inline-flex;
-    }
-}
-
-/* Tablet y Desktop - diseño original */
-@media (min-width: 768px) {
-    .mil-cards-wrapper {
-        flex-direction: row !important;
-        align-items: flex-start !important;
-        justify-content: flex-start !important;
-    }
-    .mil-cards-column {
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-}
-
-
-                </style> -->
-
-
+                        setInterval(() => {
+                            currentSlide = (currentSlide + 1) % totalSlides;
+                            showSlide(currentSlide);
+                        }, 4000);
+                    });
+                </script>
 
                 <!-- Quienes Somos -->
                 <section id="nosotros">
@@ -767,9 +580,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </section>
 
-
                 <!-- Proceso claro -->
-
                 <section class="mil-dark-bg mil-dark-bg-2" id="metodologia">
                     <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
@@ -861,34 +672,44 @@ document.addEventListener("DOMContentLoaded", () => {
                                                 </a>
                                             </div>
                                         </div>
-<style>
-/* Solo para los números dentro de .mil-arrow-place-counter en los service cards */
-.mil-services-grid .mil-arrow-place-counter {
-    background-color: orange;    /* Fondo naranja */
-    color: #fff;                 /* Número blanco */
-    font-weight: bold;
-    font-size: 1.5rem;           /* Número más grande */
-    width: 50px;                 /* Ancho fijo más grande */
-    height: 50px;                /* Alto fijo más grande */
-    border-radius: 50%;          /* Círculo perfecto */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;                  /* Sin padding extra */
-    margin-top: auto;            /* Empuja hacia abajo en flex column */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra sutil para destacarlo */
-    transition: transform 0.3s ease; /* Transición suave al interactuar */
-}
+                                        <style>
+                                            /* Solo para los números dentro de .mil-arrow-place-counter en los service cards */
+                                            .mil-services-grid .mil-arrow-place-counter {
+                                                background-color: orange;
+                                                /* Fondo naranja */
+                                                color: #fff;
+                                                /* Número blanco */
+                                                font-weight: bold;
+                                                font-size: 1.5rem;
+                                                /* Número más grande */
+                                                width: 50px;
+                                                /* Ancho fijo más grande */
+                                                height: 50px;
+                                                /* Alto fijo más grande */
+                                                border-radius: 50%;
+                                                /* Círculo perfecto */
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                padding: 0;
+                                                /* Sin padding extra */
+                                                margin-top: auto;
+                                                /* Empuja hacia abajo en flex column */
+                                                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                                                /* Sombra sutil para destacarlo */
+                                                transition: transform 0.3s ease;
+                                                /* Transición suave al interactuar */
+                                            }
 
-/* Responsive: ligeramente más pequeño en mobile */
-@media (max-width: 768px) {
-    .mil-services-grid .mil-arrow-place-counter {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-}
-</style>
+                                            /* Responsive: ligeramente más pequeño en mobile */
+                                            @media (max-width: 768px) {
+                                                .mil-services-grid .mil-arrow-place-counter {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    font-size: 1.2rem;
+                                                }
+                                            }
+                                        </style>
 
 
 
@@ -1386,25 +1207,14 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     <!-- wrapper end -->
 
-    <!-- jQuery js -->
-
-    <!-- jQuery js -->
     <script src="js/plugins/jquery.min.js"></script>
-    <!-- swup js -->
     <script src="js/plugins/swup.min.js"></script>
-    <!-- swiper js -->
     <script src="js/plugins/swiper.min.js"></script>
-    <!-- fancybox js -->
     <script src="js/plugins/fancybox.min.js"></script>
-    <!-- gsap js -->
     <script src="js/plugins/gsap.min.js"></script>
-    <!-- scroll smoother -->
     <script src="js/plugins/smooth-scroll.js"></script>
-    <!-- scroll trigger js -->
     <script src="js/plugins/ScrollTrigger.min.js"></script>
-    <!-- scroll to js -->
     <script src="js/plugins/ScrollTo.min.js"></script>
-    <!-- ashley js -->
     <script src="js/main.js"></script>
 
 </body>
