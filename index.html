@@ -267,11 +267,9 @@
                                     </div>
                                 </div>
 
-                                <a href="https://wa.me/5492944384661?text=Hola%20Leo,%20quiero%20consultar%20sobre%20un%20tatuaje"
-                                    target="_blank" class="mil-button mil-arrow-place mil-btn-space">
+                                <a href="#" class="mil-button mil-arrow-place mil-btn-space wsp-btn">
                                     <span>Contanos tu idea</span>
                                 </a>
-
 
                                 <a href="#metodologia" class="mil-link mil-muted mil-arrow-place">
                                     <span>Nuestro método</span>
@@ -327,8 +325,7 @@
                                         sobre el diseño, el lugar o si será la decisión correcta.
                                     </p>
                                     <div class="mil-up">
-                                        <a href="https://wa.me/5492944384661"
-                                            class="mil-services-button mil-button mil-arrow-place">
+                                        <a href="#" class="mil-services-button mil-button mil-arrow-place wsp-btn">
                                             <span>Contame tu historia</span>
                                         </a>
                                     </div>
@@ -465,8 +462,8 @@
                                         acompañado. Sabemos que tatuarse puede dar ansiedad, que a veces no sabés bien
                                         qué querés o que venís con una historia para cubrir o resignificar.</p>
 
-                                    <div class="mil-up"><a href="https://wa.me/5492944384661"
-                                            class="mil-services-button mil-button mil-arrow-place mil-arrow-place mil-mb-60"><span>Contactar</span></a>
+                                    <div class="mil-up"><a href="#"
+                                            class="mil-services-button mil-button mil-arrow-place mil-arrow-place mil-mb wsp-btn-60 wsp-btn"><span>Contactar</span></a>
                                     </div>
 
                                     <h4>
@@ -617,8 +614,8 @@
                                                     </h2>
                                                 </div>
                                             </div>
-                                            <a href="https://wa.me/5492944384661"
-                                                class="mil-services-button mil-button mil-arrow-place cta-button">
+                                            <a href="#"
+                                                class="mil-services-button mil-button mil-arrow-place cta-button wsp-btn">
                                                 <span>Quiero mi turno</span>
                                             </a>
                                         </div>
@@ -1098,8 +1095,8 @@
                                 <!-- CTA -->
                                 <div class="mil-mt-10">
                                     <p class="mil-mb-30">¿Tienes más preguntas?</p>
-                                    <a href="https://wa.me/5492944384661"
-                                        class="mil-services-button mil-button mil-arrow-place">Preguntanos por
+                                    <a href="#"
+                                        class="mil-services-button mil-button mil-arrow-place wsp-btn">Preguntanos por
                                         WhatsApp
                                     </a>
                                 </div>
@@ -1125,8 +1122,7 @@
                             que tenga <span class="mil-thin">sentido para vos.</span>
                         </h2>
                         <div class="mil-up">
-                            <a href="https://wa.me/5492944384661"
-                                class="mil-services-button mil-button mil-arrow-place">Reservar mi
+                            <a href="#" class="mil-services-button mil-button mil-arrow-place wsp-btn">Reservar mi
                                 consulta por WhatsApp</a>
                         </div>
                     </div>
@@ -1167,7 +1163,15 @@
     <!-- content -->
     </div>
     <!-- wrapper end -->
-
+    <script>
+        document.querySelectorAll(".wsp-btn").forEach(function (btn) {
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                const url = "https://wa.me/5492944384661?text=Hola%20Leo,%20quiero%20consultar%20sobre%20un%20tatuaje";
+                window.open(url, "_blank");
+            });
+        });
+    </script>
     <script src="js/plugins/jquery.min.js"></script>
     <script src="js/plugins/swup.min.js"></script>
     <script src="js/plugins/swiper.min.js"></script>
