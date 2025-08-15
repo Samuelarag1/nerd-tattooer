@@ -1900,10 +1900,11 @@ menu
 
 banner
 
-------------------------------------------- */.mil-banner {
+------------------------------------------- */
+.mil-banner {
   height: 100vh;
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), transparent),
-                    url(../img/hero.JPG);
+  url(../img/hero-desktop.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1913,7 +1914,7 @@ banner
 @media (max-width: 768px) {
   .mil-banner {
     background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), transparent),
-                      url(../img/hero-mobile.JPG);
+    url(../img/hero-mobile.webp);
   }
 }
 
