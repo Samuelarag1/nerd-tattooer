@@ -5293,6 +5293,7 @@ FAQs Section
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
 .mil-faq-cta p {
   color: #ffffff;
   font-size: 1.2rem;
@@ -5579,5 +5580,120 @@ Responsive Design
   .mil-footer-section .mil-btn {
     padding: 0.875rem 1.75rem;
     font-size: 0.9rem;
+  }
+}
+
+
+/* --- ESTILOS DE LAYOUT Y FONDOS --- */
+.mil-dark-bg-2 .mil-animation.mil-position-1 {
+    top: 300px;
+    right: -100px;
+}
+.mil-dark-bg-2 .mil-animation.mil-position-2 {
+    left: 150px;
+}
+.layout-row {
+    align-items: stretch;
+}
+
+/* --- TÍTULO Y BOTÓN PRINCIPAL --- */
+.titulo-y-boton-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+#mainSubtitle {
+    font-size: 1.8rem; /* Letra más pequeña que antes */
+    line-height: 1.3;
+}
+.cta-button {
+    min-width: 200px;
+    flex-shrink: 0; /* Evita que el botón se encoja */
+}
+
+/* --- CARDS DE SERVICIOS --- */
+.mil-service-card-sm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.mil-service-card-sm.active-card {
+    border-color: orange; /* Borde naranja para la card seleccionada */
+}
+.mil-services-grid .mil-arrow-place-counter {
+    background-color: orange;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* --- COLUMNA DINÁMICA (DERECHA) --- */
+.columna-dinamica {
+    padding-left: 30px;
+}
+.contenido-dinamico {
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.imagen-dinamica {
+    max-width: 300px;
+}
+.descripcion-dinamica {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* --- ESTILOS RESPONSIVE --- */
+@media (max-width: 768px) {
+    .mil-services-grid .mil-arrow-place-counter {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .titulo-y-boton-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* Estilo general */
+.mil-faq-cta a {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 16px;
+}
+
+/* Mobile: reducir tamaño */
+@media (max-width: 480px) {
+  .mil-faq-cta p {
+    font-size: 14px;
+    /* Texto más chico */
+    margin-bottom: 15px;
+  }
+
+  .mil-faq-cta a {
+    padding: 8px 18px;
+    /* Botón más pequeño */
+    font-size: 14px;
   }
 }
