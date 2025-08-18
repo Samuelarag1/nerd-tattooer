@@ -4973,6 +4973,7 @@ Testimonios Section
   padding: 1rem;
   height: 100%;
   display: flex;
+  margin-top: 10px;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -5753,8 +5754,7 @@ Responsive Design
 .testimonial-content {
   position: relative;
   z-index: 2;
-  /* Para que el texto esté sobre las comillas */
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .testimonial-content p {
@@ -5811,4 +5811,145 @@ Responsive Design
   justify-content: center;
   margin-bottom: 20px;
   /* espacio entre icono y título */
+}
+/* ==== Mantengo tu estilo .testimonial-card-simple ==== */
+.testimonial-card-simple {
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 40px 30px 30px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+}
+
+/* contenido interno */
+.testimonial-content p {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* autor */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.author-avatar img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info .author-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.author-info .author-title {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ==== Swiper specific styles ==== */
+.testimonial-swiper {
+  padding: 20px 10px 50px;
+  overflow: visible;
+}
+
+/* Base slide: se adapta al JS con slidesPerView */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  opacity: 0.6;
+  transform: scale(0.92);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+/* Centro y laterales */
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.04);
+  z-index: 3;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 0.9;
+  transform: scale(0.96);
+  z-index: 2;
+}
+
+/* Sombra para la tarjeta activa */
+.swiper-slide-active .testimonial-card-simple {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Flechas y paginación (ligeras) */
+.swiper-button-next,
+.swiper-button-prev {
+  top: 46%;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(2px);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  transform: scale(1.4);
+  opacity: 1;
+}
+
+/* Responsive: en móviles ocupan 1 slide full */
+@media (max-width: 767px) {
+  .testimonial-card-simple {
+    padding: 28px 20px 24px 20px;
+  }
+
+  .author-avatar img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  /* opcional */
+}
+
+/* Aseguro que las tarjetas no se corten */
+.testimonial-swiper .swiper-slide .testimonial-card-simple {
+  width: 100%;
+  max-width: 360px;
+  /* limitamos ancho para que 3 entren bien */
+  margin: 0 auto;
+}
+
+@media(min-width: 1200px) {
+  .testimonial-swiper .swiper-slide .testimonial-card-simple {
+    max-width: 400px;
+  }
 }

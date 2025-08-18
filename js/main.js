@@ -1411,3 +1411,55 @@ $(function () {
     });
   });
 });
+// Ejecutar después de cargar Swiper (colocá este script después de swiper-bundle.js)
+(function () {
+  // decide si estamos en mobile para desactivar freeMode (snap en mobile)
+  function isMobile() {
+    return window.matchMedia("(max-width: 767px)").matches;
+  }
+
+  const swiper = new Swiper(".testimonial-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    speed: 560,
+    // Mostrar 1 en mobile, 3 en >=768 (siempre exactamente 3)
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 3 },
+    },
+    // freeMode solo en desktop para inercia (si preferís snap fijo pon freeMode:false)
+    freeMode: !isMobile()
+      ? { enabled: true, momentum: true, momentumBounce: false }
+      : false,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 160,
+      modifier: 1,
+      slideShadows: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // Si cambian dimensiones, actualizamos freeMode según corresponda
+  let lastMobile = isMobile();
+  window.addEventListener("resize", function () {
+    const nowMobile = isMobile();
+    if (nowMobile !== lastMobile) {
+      lastMobile = nowMobile;
+      swiper.params.freeMode = nowMobile
+        ? false
+        : { enabled: true, momentum: true, momentumBounce: false };
+      swiper.update();
+    }
+  });
+})();
