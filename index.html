@@ -52,7 +52,7 @@
         "addressCountry": "AR"
       },
       "url": "https://nerdtattooer.com/",
-      "telephone": "+54 9 2944384661"
+      "telephone": "+54 9 3518 66-8648"
     }
     </script>
 
@@ -80,7 +80,7 @@
 
         <!-- preloader -->
 
-        <div class="mil-preloader">
+        <!-- <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
                     <p class="mil-h3 mil-muted mil-thin">Confianza</p>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- preloader end -->
 
@@ -316,10 +316,39 @@
 
                         <div class="row g-0 align-items-center" style="min-height: 100vh;">
 
-                            <!-- Texto primero en mobile -->
-                            <div class="col-12 col-lg-6 p-5 order-1 order-lg-2">
+                            <div class="col-12 order-1 d-lg-none p-5 pb-0">
+                                <h2 class="mil-up mil-mb-60">¿Te pasa esto?</h2>
+                            </div>
+
+                            <div class="col-12 col-lg-6 p-0 order-2 order-lg-1">
+                                <div class="carousel-container">
+                                    <div class="carousel-slide active"
+                                        style="background-image: url('./img/situation/1.jpg');">
+                                        <div class="carousel-overlay">
+                                            <h3>Tengo una idea, pero no sé cómo tatuar</h3>
+                                            <p>No quiero hacerme algo que no me represente...</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-slide" style="background-image: url('./img/situation/2.jpg');">
+                                        <div class="carousel-overlay">
+                                            <h3>Tengo que arreglar una cagada que me hice</h3>
+                                            <p>Me hice algo hace años y ahora siento que no tiene nada que ver
+                                                conmigo...</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-slide" style="background-image: url('./img/situation/3.jpg');">
+                                        <div class="carousel-overlay">
+                                            <h3>Me da miedo que no quede como quiero</h3>
+                                            <p>Veo muchos tatuadores en redes, pero no sé quién realmente escucha...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 p-5 order-3 order-lg-2">
                                 <div class="mil-mb-90">
-                                    <h2 class="mil-up mil-mb-60">¿Te pasa esto?</h2>
+                                    <h2 class="mil-up mil-mb-60 d-none d-lg-block">¿Te pasa esto?</h2>
+
                                     <p class="mil-up mil-mb-60">
                                         Sabemos que tatuarse puede generar muchas dudas. Es normal sentir incertidumbre
                                         sobre el diseño, el lugar o si será la decisión correcta.
@@ -328,35 +357,6 @@
                                         <a href="#" class="mil-services-button mil-button mil-arrow-place wsp-btn">
                                             <span>Contame tu historia</span>
                                         </a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- Carrusel primero en desktop -->
-                            <div class="col-12 col-lg-6 p-0 order-2 order-lg-1">
-                                <div class="carousel-container">
-                                    <div class="carousel-slide active"
-                                        style="background-image: url('./img/situation/1.jpg');">
-                                        <div class="carousel-overlay">
-                                            <h3>Tengo una idea, pero no sé cómo tatuar</h3>
-                                            <p>No quiero hacerme algo que no me represente. No sé si elegir bien el
-                                                diseño, el tamaño o el lugar del cuerpo.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-slide" style="background-image: url('./img/situation/2.jpg');">
-                                        <div class="carousel-overlay">
-                                            <h3>Tengo que arreglar una cagada que me hice</h3>
-                                            <p>Me hice algo hace años y ahora siento que no tiene nada que ver conmigo.
-                                                Quiero cubrirlo, pero no sé qué se puede hacer.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-slide" style="background-image: url('./img/situation/3.jpg');">
-                                        <div class="carousel-overlay">
-                                            <h3>Me da miedo que no quede como quiero</h3>
-                                            <p>Veo muchos tatuadores en redes, pero no sé quién realmente escucha lo que
-                                                quiero o tiene la experiencia.</p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -424,7 +424,6 @@
                         }
                     }
                 </style>
-
                 <script>
                     document.addEventListener("DOMContentLoaded", () => {
                         let currentSlide = 0;
@@ -543,7 +542,7 @@
                                                                         class="fab fa-instagram"></i></a></li>
                                                             <!-- <li><a href="#." target="_blank" class="social-icon"> <i
                                                                         class="fab fa-twitter"></i></a></li> -->
-                                                            <!-- <li><a href="https://wa.me/+5492944384661" target="_blank"
+                                                            <!-- <li><a href="https://wa.me/+5493518668648" target="_blank"
                                                                     class="social-icon"> <i
                                                                         class="fab fa-whatsapp"></i></a></li> -->
                                                         </ul>
@@ -582,7 +581,7 @@
                 </section>
 
                 <!-- Proceso claro -->
-                <section class="mil-dark-bg mil-dark-bg-2" id="metodologia">
+                <section class="mil-dark-bg-2 mil-dark-bg" id="metodologia">
                     <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4">
@@ -625,36 +624,68 @@
                                                 <a href="#" class="mil-service-card-sm mil-up active-card"
                                                     data-image="img/weare/leo.webp"
                                                     data-description="Nos tomamos el tiempo de entender qué querés contar, incluso si solo tenés una idea o sensación.">
+
+                                                    <!-- Icono arriba -->
+                                                    <div class="card-icon">
+                                                        <img src="img/icons/paso-1.webp" alt="Idea">
+                                                    </div>
+
                                                     <h5 class="mil-muted mil-mb-30">Escuchamos tu idea <br>con atención
                                                     </h5>
                                                     <p class="mil-light-soft mil-mb-30">Tengas un diseño claro o solo
                                                         una idea, buscamos entender qué querés contar.</p>
-                                                    <div class="mil-services-button mil-button mil-arrow-place-counter">
-                                                        1</div>
+                                                    <div class="mil-services-button mil-arrow-place-counter" style="width:50px; height:50px; background-color:rgb(255,152,0); color:#fff;
+            display:flex; justify-content:center; align-items:center; border-radius:50%;
+            font-weight:bold; font-size:18px; cursor:default; transition:none;">
+                                                        1
+                                                    </div>
+
                                                 </a>
                                             </div>
+
                                             <div class="col-md-6 col-lg-4 mil-services-grid-item p-0">
                                                 <a href="#" class="mil-service-card-sm mil-up"
                                                     data-image="img/weare/tattoo-1.webp"
                                                     data-description="Diseñamos cada tatuaje para tu cuerpo, estilo e historia, sin plantillas ni fórmulas.">
+
+                                                    <!-- Icono arriba -->
+                                                    <div class="card-icon">
+                                                        <img src="img/icons/paso-2.webp" alt="Diseño">
+                                                    </div>
+
                                                     <h5 class="mil-muted mil-mb-30">Diseñamos algo único <br>para vos
                                                     </h5>
                                                     <p class="mil-light-soft mil-mb-30">Cada tatuaje se adapta a tu
                                                         cuerpo, estilo e historia. Sin plantillas.</p>
-                                                    <div class="mil-services-button mil-button mil-arrow-place-counter">
-                                                        2</div>
+                                                    <div class="mil-services-button mil-arrow-place-counter" style="width:50px; height:50px; background-color:rgb(255,152,0); color:#fff;
+            display:flex; justify-content:center; align-items:center; border-radius:50%;
+            font-weight:bold; font-size:18px; cursor:default; transition:none;">
+                                                        2
+                                                    </div>
+
                                                 </a>
                                             </div>
+
                                             <div class="col-md-6 col-lg-4 mil-services-grid-item p-0">
                                                 <a href="#" class="mil-service-card-sm mil-up"
                                                     data-image="img/weare/tattoo-1.webp"
                                                     data-description="Trabajamos con materiales profesionales y cuidado artístico para garantizar una experiencia de calidad.">
+
+                                                    <!-- Icono arriba -->
+                                                    <div class="card-icon">
+                                                        <img src="img/icons/paso-3.webp" alt="Cuidado">
+                                                    </div>
+
                                                     <h5 class="mil-muted mil-mb-30">Tatuamos con <br>técnica y cuidado
                                                     </h5>
                                                     <p class="mil-light-soft mil-mb-30">Usamos materiales profesionales
                                                         y criterio artístico en cada paso.</p>
-                                                    <div class="mil-services-button mil-button mil-arrow-place-counter">
-                                                        3</div>
+                                                    <div class="mil-services-button mil-arrow-place-counter" style="width:50px; height:50px; background-color:rgb(255,152,0); color:#fff;
+            display:flex; justify-content:center; align-items:center; border-radius:50%;
+            font-weight:bold; font-size:18px; cursor:default; transition:none;">
+                                                        3
+                                                    </div>
+
                                                 </a>
                                             </div>
                                         </div>
@@ -678,38 +709,87 @@
 
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
-                        // Seleccionamos todos los elementos necesarios
                         const serviceCards = document.querySelectorAll('.mil-service-card-sm');
                         const dynamicImage = document.getElementById('dynamicImage');
                         const dynamicDescription = document.getElementById('dynamicDescription');
 
-                        // Función para actualizar el contenido dinámico
+                        let currentIndex = 0;
+                        let autoPlay = true;
+
                         function updateContent(card) {
-                            // Obtenemos los datos de la card
                             const newImage = card.dataset.image;
                             const newDescription = card.dataset.description;
 
-                            // Actualizamos la imagen y el texto
                             dynamicImage.src = newImage;
                             dynamicDescription.textContent = newDescription;
 
-                            // Gestionamos la clase 'active-card'
-                            // Primero la quitamos de todas las cards
+                            // Gestionamos la clase 'active-card' para la animación
                             serviceCards.forEach(c => c.classList.remove('active-card'));
-                            // Luego la añadimos solo a la card clickeada
                             card.classList.add('active-card');
                         }
 
-                        // Añadimos un evento de clic a cada card
-                        serviceCards.forEach(card => {
+                        // Evento de click: actualiza contenido y detiene autoplay
+                        serviceCards.forEach((card, index) => {
                             card.addEventListener('click', function (event) {
-                                event.preventDefault(); // Evita que el enlace '#' recargue la página
+                                event.preventDefault();
                                 updateContent(this);
+                                autoPlay = false;
+                                currentIndex = index;
                             });
                         });
+
+                        // Autoplay
+                        setInterval(() => {
+                            if (!autoPlay) return;
+
+                            currentIndex = (currentIndex + 1) % serviceCards.length;
+                            updateContent(serviceCards[currentIndex]);
+                        }, 4000); // 4 segundos por card
+                    });
+
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const serviceCards = document.querySelectorAll('.mil-service-card-sm');
+                        const dynamicImage = document.getElementById('dynamicImage');
+                        const dynamicDescription = document.getElementById('dynamicDescription');
+
+                        let currentIndex = 0;
+                        let autoPlay = true; // flag para autoplay
+
+                        function updateContent(card) {
+                            const newImage = card.dataset.image;
+                            const newDescription = card.dataset.description;
+
+                            dynamicImage.src = newImage;
+                            dynamicDescription.textContent = newDescription;
+
+                            serviceCards.forEach(c => c.classList.remove('active-card'));
+                            card.classList.add('active-card');
+                        }
+
+                        // Evento de click: actualiza contenido y detiene autoplay
+                        serviceCards.forEach((card, index) => {
+                            card.addEventListener('click', function (event) {
+                                event.preventDefault();
+                                updateContent(this);
+                                autoPlay = false; // el usuario hizo click, se detiene el autoplay
+                                currentIndex = index; // actualizamos el índice para que continúe desde aquí si se reinicia
+                            });
+                        });
+
+                        // Función autoplay
+                        function startAutoPlay() {
+                            setInterval(() => {
+                                if (!autoPlay) return; // si el usuario hizo click, no avanzamos automáticamente
+
+                                currentIndex = (currentIndex + 1) % serviceCards.length; // siguiente card
+                                updateContent(serviceCards[currentIndex]);
+                            }, 4000); // 4 segundos por card, ajustable
+                        }
+
+                        startAutoPlay();
                     });
                 </script>
-
 
 
 
@@ -717,215 +797,188 @@
             </div>
 
             <!-- Testimonios Section -->
-            <!-- <section class="mil-testimonials-section mil-p-120-120" id="testimonios">
+            <section class="mil-testimonials-section mil-p-120-120" id="testimonios">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 text-center">
                             <div class="mil-up">
                                 <h2 class="mil-mb-60">Lo que dicen nuestros clientes</h2>
-                                <p class="mil-mb-90">Experiencias reales de personas que confiaron en nuestro trabajo
+                                <p class="mil-mb-90">Experiencias reales de personas que confiaron en nuestro trabajo.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="mil-testimonials-slider">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper mil-mt-10">
+                    <div class="row justify-content-center">
 
-                                        <div class="swiper-slide">
-                                            <div class="mil-testimonial-card" data-testimonial="1">
-                                                <div class="mil-testimonial-inner">
-                                                    <div class="mil-testimonial-front">
-                                                        <div class="mil-testimonial-content">
-                                                            <div class="mil-stars">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                            <p class="mil-testimonial-text">"Increíble experiencia. El
-                                                                diseño superó mis expectativas y el proceso fue muy
-                                                                profesional. Definitivamente volveré para mi próximo
-                                                                tatuaje."</p>
-                                                            <div class="mil-testimonial-author">
-                                                                <img src="img/faces/customers/1.jpg" alt="Cliente"
-                                                                    class="mil-author-avatar">
-                                                                <div class="mil-author-info">
-                                                                    <h5>María González</h5>
-                                                                    <span>Tatuaje en el brazo</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mil-testimonial-back">
-                                                        <div class="mil-work-done">
-                                                            <h4>El trabajo realizado</h4>
-                                                            <div class="mil-work-image">
-                                                                <img src="img/works/1/1.jpg"
-                                                                    alt="Trabajo de María González">
-                                                            </div>
-                                                            <p class="mil-work-description">Tatuaje geométrico en el
-                                                                brazo con detalles finos y sombreado suave.</p>
-                                                            <div class="mil-work-details">
-                                                                <span class="mil-work-type">Geometría</span>
-                                                                <span class="mil-work-size">Mediano</span>
-                                                                <span class="mil-work-session">1 sesión</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="mil-testimonial-card" data-testimonial="2">
-                                                <div class="mil-testimonial-inner">
-                                                    <div class="mil-testimonial-front">
-                                                        <div class="mil-testimonial-content">
-                                                            <div class="mil-stars">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                            <p class="mil-testimonial-text">"Excelente trabajo en mi
-                                                                cover-up. Transformó completamente mi tatuaje anterior
-                                                                en algo hermoso. Muy recomendado."</p>
-                                                            <div class="mil-testimonial-author">
-                                                                <img src="img/faces/customers/2.jpg" alt="Cliente"
-                                                                    class="mil-author-avatar">
-                                                                <div class="mil-author-info">
-                                                                    <h5>Carlos Rodríguez</h5>
-                                                                    <span>Cover-up en el pecho</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mil-testimonial-back">
-                                                        <div class="mil-work-done">
-                                                            <h4>El trabajo realizado</h4>
-                                                            <div class="mil-work-image">
-                                                                <img src="img/works/2/1.jpg"
-                                                                    alt="Trabajo de Carlos Rodríguez">
-                                                            </div>
-                                                            <p class="mil-work-description">Cover-up completo del pecho
-                                                                con diseño floral que oculta perfectamente el tatuaje
-                                                                anterior.</p>
-                                                            <div class="mil-work-details">
-                                                                <span class="mil-work-type">Floral</span>
-                                                                <span class="mil-work-size">Grande</span>
-                                                                <span class="mil-work-session">2 sesiones</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="mil-testimonial-card" data-testimonial="3">
-                                                <div class="mil-testimonial-inner">
-                                                    <div class="mil-testimonial-front">
-                                                        <div class="mil-testimonial-content">
-                                                            <div class="mil-stars">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                            <p class="mil-testimonial-text">"El artista tiene un talento
-                                                                increíble. Mi tatuaje de geometría sagrada quedó
-                                                                perfecto y la atención al detalle es impresionante."</p>
-                                                            <div class="mil-testimonial-author">
-                                                                <img src="img/faces/customers/3.jpg" alt="Cliente"
-                                                                    class="mil-author-avatar">
-                                                                <div class="mil-author-info">
-                                                                    <h5>Ana Martínez</h5>
-                                                                    <span>Tatuaje geométrico en la espalda</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mil-testimonial-back">
-                                                        <div class="mil-work-done">
-                                                            <h4>El trabajo realizado</h4>
-                                                            <div class="mil-work-image">
-                                                                <img src="img/works/3/1.jpg"
-                                                                    alt="Trabajo de Ana Martínez">
-                                                            </div>
-                                                            <p class="mil-work-description">Tatuaje de geometría sagrada
-                                                                en la espalda con líneas perfectas y simetría exacta.
-                                                            </p>
-                                                            <div class="mil-work-details">
-                                                                <span class="mil-work-type">Geometría Sagrada</span>
-                                                                <span class="mil-work-size">Grande</span>
-                                                                <span class="mil-work-session">1 sesión</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="mil-testimonial-card" data-testimonial="4">
-                                                <div class="mil-testimonial-inner">
-                                                    <div class="mil-testimonial-front">
-                                                        <div class="mil-testimonial-content">
-                                                            <div class="mil-stars">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                            <p class="mil-testimonial-text">"Primera vez que me tatúo y
-                                                                fue una experiencia increíble. El artista me explicó
-                                                                todo el proceso y me hizo sentir muy cómoda."</p>
-                                                            <div class="mil-testimonial-author">
-                                                                <img src="img/faces/customers/4.jpg" alt="Cliente"
-                                                                    class="mil-author-avatar">
-                                                                <div class="mil-author-info">
-                                                                    <h5>Laura Fernández</h5>
-                                                                    <span>Primer tatuaje en el tobillo</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mil-testimonial-back">
-                                                        <div class="mil-work-done">
-                                                            <h4>El trabajo realizado</h4>
-                                                            <div class="mil-work-image">
-                                                                <img src="img/works/4/1.jpg"
-                                                                    alt="Trabajo de Laura Fernández">
-                                                            </div>
-                                                            <p class="mil-work-description">Tatuaje minimalista en el
-                                                                tobillo con líneas finas y diseño elegante.</p>
-                                                            <div class="mil-work-details">
-                                                                <span class="mil-work-type">Minimalista</span>
-                                                                <span class="mil-work-size">Pequeño</span>
-                                                                <span class="mil-work-session">1 sesión</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Creo que ninguno de los tatuajes que me hice con él va a dejar de gustarme.
+                                        Captura muy bien la esencia de lo que quería plasmar y mejora cada idea loca que
+                                        le tirás."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/3.jpg" alt="Foto de Agustin Maldonado">
                                     </div>
-
-                              </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Agustin Maldonado</div>
+                                        <div class="author-title">Comercial en IA</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Muy profesional y tranquilo. Se asegura que todo quede prolijo y con buen
+                                        seguimiento de líneas. Además, un capo total para charlar de distintos temas."
+                                    </p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/4.jpg" alt="Foto de Nico Cols">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Nico Cols</div>
+                                        <div class="author-title">Programador</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Nivel de detalle impresionante, siempre sincero y con recomendaciones sobre el
+                                        diseño que armamos juntos."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/5.jpg" alt="Foto de Pedro Conci">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Pedro Conci</div>
+                                        <div class="author-title">Ingeniero industrial</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Siempre me sentí acompañado, trabajo metódico y consejos para controlar el dolor
+                                        durante sesiones largas."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/6.jpg" alt="Foto de Gonzalo Cornejo">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Gonzalo Cornejo</div>
+                                        <div class="author-title">Tatuador</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Hermosa experiencia, diseño que superó mis expectativas y buena charla durante
+                                        la sesión."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/7.jpg" alt="Foto de Alicia Briceño">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Alicia Briceño</div>
+                                        <div class="author-title">Administración</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Sorprende la visión del cuerpo, relectura anatómica y charlas de reflexión y
+                                        conexión."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/8.jpg" alt="Foto de Ray Armani">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Ray Armani</div>
+                                        <div class="author-title">Diseñador 3D</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"10/10, el diseño me encantó. Sesión cómoda, mucha buena onda y corazón en lo que
+                                        hace."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/9.jpg" alt="Foto de Santiago Hernandez">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Santiago Hernandez</div>
+                                        <div class="author-title">Ventas</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Muchas ideas en la cabeza y quedó perfecto el concepto final en la piel."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/10.jpg" alt="Foto de Irene Lazarte">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Irene Lazarte</div>
+                                        <div class="author-title">Artista Visual</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card-simple">
+                                <div class="testimonial-content">
+                                    <p>"Resultado mejor de lo esperado, sesión como juntada con un amigo de toda la
+                                        vida. Recomendado."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="img/faces/customers/11.jpg" alt="Foto de Sol Monsalvo">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Sol Monsalvo</div>
+                                        <div class="author-title">Hotelería</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
-            </section> -->
-            <!-- Testimonios Section end -->
+            </section>
+
 
             <!-- FAQs Section -->
             <section class="mil-faqs-section mil-p-120-120" id="faq">
@@ -1130,36 +1183,38 @@
             </section>
 
             <!-- Footer  -->
-<footer style="background-color: #f9f9f9; padding: 20px 40px; font-family: Arial, sans-serif; color: #555;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
-        <!-- Texto izquierdo -->
-        <div style="font-size: 14px;">
-            &copy; 2025 NerdTattooer. Todos los derechos reservados.
-        </div>
+            <footer style="background-color: #f9f9f9; padding: 20px 40px; font-family: Arial, sans-serif; color: #555;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                    <!-- Texto izquierdo -->
+                    <div style="font-size: 14px;">
+                        &copy; 2025 NerdTattooer. Todos los derechos reservados.
+                    </div>
 
-        <!-- Texto derecho -->
-        <div style="font-size: 14px;">
-            Desarrollado por
-            <a href="https://samaragtech.com" target="_blank" style="color: #888; text-decoration: none; font-weight: 500;">
-                SamaragTech.com
-            </a>
-        </div>
-    </div>
-</footer>
+                    <!-- Texto derecho -->
+                    <div style="font-size: 14px;">
+                        Desarrollado por
+                        <a href="https://samaragtech.com" target="_blank"
+                            style="color: #888; text-decoration: none; font-weight: 500;">
+                            SamaragTech.com
+                        </a>
+                    </div>
+                </div>
+            </footer>
 
-<!-- Responsive: en mobile apilamos todo y centramos -->
-<style>
-@media (max-width: 767px) {
-    footer div[style*="display: flex"] {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    footer div[style*="display: flex"] > div {
-        margin: 5px 0;
-    }
-}
-</style>
+            <!-- Responsive: en mobile apilamos todo y centramos -->
+            <style>
+                @media (max-width: 767px) {
+                    footer div[style*="display: flex"] {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    footer div[style*="display: flex"]>div {
+                        margin: 5px 0;
+                    }
+                }
+            </style>
 
 
             <!-- hidden elements end -->
@@ -1201,7 +1256,7 @@
         document.querySelectorAll(".wsp-btn").forEach(function (btn) {
             btn.addEventListener("click", function (e) {
                 e.preventDefault();
-                const url = "https://wa.me/5492944384661?text=Hola%20Leo,%20quiero%20consultar%20sobre%20un%20tatuaje";
+                const url = "https://wa.me/5493518668648?text=Hola%20Leo,%20quiero%20consultar%20sobre%20un%20tatuaje";
                 window.open(url, "_blank");
             });
         });

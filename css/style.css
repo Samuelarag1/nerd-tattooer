@@ -1461,7 +1461,8 @@ frame
 
 .mil-frame-top .mil-logo {
   pointer-events: all;
-  color: rgb(0, 0, 0);
+  color: #FF9800;
+
 }
 
 /* -------------------------------------------
@@ -2723,6 +2724,27 @@ services
   background-color: rgb(255, 152, 0);
   -webkit-transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
+}
+.mil-service-card-sm {
+  position: relative;
+  overflow: hidden;
+  /* para que el :before no se salga */
+}
+
+.mil-service-card-sm:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: rgb(255, 152, 0);
+  transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+/* Cuando la card está activa, expandimos la barra */
+.mil-service-card-sm.active-card:before {
+  width: 100%;
 }
 
 .mil-service-card-sm:hover p {
@@ -5622,9 +5644,10 @@ Responsive Design
     flex-direction: column;
     height: 100%;
 }
-.mil-service-card-sm.active-card {
+.mil-service-card-sm .active-card {
     border-color: orange; /* Borde naranja para la card seleccionada */
 }
+
 .mil-services-grid .mil-arrow-place-counter {
     background-color: orange;
     color: #fff;
@@ -5697,4 +5720,95 @@ Responsive Design
     /* Botón más pequeño */
     font-size: 14px;
   }
+}
+.testimonial-card-simple {
+  background-color: #f8f8f8;
+  /* Un color de fondo claro */
+  border-radius: 20px;
+  padding: 40px 30px 30px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Las comillas gigantes */
+.testimonial-card-simple::before {
+  content: '“';
+  font-family: 'Georgia', serif;
+  font-size: 120px;
+  font-weight: bold;
+  color: #ff9800;
+  /* Color naranja */
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  line-height: 1;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 2;
+  /* Para que el texto esté sobre las comillas */
+  margin-bottom: 20px;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.author-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ff9800;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info {
+  color: #555;
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.author-title {
+  font-size: 14px;
+  color: #777;
+}
+.card-icon img {
+  width: 50px;
+  /* tamaño del icono */
+  height: 50px;
+  object-fit: contain;
+}
+.card-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* espacio entre icono y título */
 }
