@@ -5801,9 +5801,9 @@ Responsive Design
   color: #777;
 }
 .card-icon img {
-  width: 50px;
+  width: 70 px;
   /* tamaño del icono */
-  height: 50px;
+  height: 70  px;
   object-fit: contain;
 }
 .card-icon {
@@ -5952,4 +5952,36 @@ Responsive Design
   .testimonial-swiper .swiper-slide .testimonial-card-simple {
     max-width: 400px;
   }
+}
+.btn-metodo-blur {
+  /* --- Efecto de Vidrio Esmerilado (Glassmorphism) --- */
+
+  /* 1. Fondo de color con transparencia. El valor "0.2" controla qué tan transparente es. */
+  background: rgba(255, 255, 255, 0.2);
+
+  /* 2. El filtro que desenfoca lo que está detrás. Ajusta los píxeles para más o menos blur. */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Prefijo para compatibilidad con Safari */
+
+  /* --- Estilos del Botón --- */
+
+  /* 3. Bordes redondeados. */
+  border-radius: 50px;
+
+  /* 5. Espaciado interno para que el texto respire. */
+  padding: 12px 24px;
+
+  /* 6. Transición suave para el efecto al pasar el mouse. */
+
+transition: transform 0.5s ease;
+}
+
+/* Efecto al pasar el mouse por encima (hover) */
+.btn-metodo-blur:hover {
+  /* Hacemos el fondo un poco más opaco para dar feedback al usuario */
+  background: rgba(255, 255, 255, 0.35);
+
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
