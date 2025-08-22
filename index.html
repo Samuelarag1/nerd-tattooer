@@ -311,40 +311,35 @@
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.2" data-value-2="1.3"
                                 style="top: 220px; right: -80px"></div>
                             <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1"
-                                style="left: 120px"></div>
+                                style="left: 120px">
+                            </div>
                         </div>
 
                         <div class="row g-0 align-items-center" style="min-height: 100vh;">
 
-                            <div class="col-12 order-1 d-lg-none p-5 pb-0">
-                                <h2 class="mil-up mil-mb-60">¿Te pasa esto?</h2>
-                            </div>
-
+                            <!-- Columna izquierda (imágenes) -->
                             <div class="col-12 col-lg-6 p-0 order-2 order-lg-1">
+
+                                <!-- 🔥 Título en mobile -->
+                                <h2 class="mil-up mil-mb-30 d-lg-none text-center m-10">¿Te pasa esto?</h2>
+
                                 <div class="carousel-container">
                                     <div class="carousel-slide active"
-                                        style="background-image: url('./img/situation/1.jpg');">
-                                        <div class="carousel-overlay">
-                                            <h3>Tengo una idea, pero no sé cómo tatuar</h3>
-                                            <p>No quiero hacerme algo que no me represente...</p>
-                                        </div>
+                                        data-images="./img/situation/situacion-1a.webp,./img/situation/situacion-1b.webp">
+                                        <div class="carousel-label">Antes</div>
                                     </div>
-                                    <div class="carousel-slide" style="background-image: url('./img/situation/2.jpg');">
-                                        <div class="carousel-overlay">
-                                            <h3>Tengo que arreglar una cagada que me hice</h3>
-                                            <p>Me hice algo hace años y ahora siento que no tiene nada que ver
-                                                conmigo...</p>
-                                        </div>
+                                    <div class="carousel-slide"
+                                        data-images="./img/situation/situacion-2a.webp,./img/situation/situacion-2b.webp">
+                                        <div class="carousel-label">Antes</div>
                                     </div>
-                                    <div class="carousel-slide" style="background-image: url('./img/situation/3.jpg');">
-                                        <div class="carousel-overlay">
-                                            <h3>Me da miedo que no quede como quiero</h3>
-                                            <p>Veo muchos tatuadores en redes, pero no sé quién realmente escucha...</p>
-                                        </div>
+                                    <div class="carousel-slide"
+                                        data-images="./img/situation/situacion-3a.webp,./img/situation/situacion-3b.webp">
+                                        <div class="carousel-label">Antes</div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Columna derecha -->
                             <div class="col-12 col-lg-6 p-5 order-3 order-lg-2">
                                 <div class="mil-mb-90">
                                     <h2 class="mil-up mil-mb-60 d-none d-lg-block">¿Te pasa esto?</h2>
@@ -353,6 +348,35 @@
                                         Sabemos que tatuarse puede generar muchas dudas. Es normal sentir incertidumbre
                                         sobre el diseño, el lugar o si será la decisión correcta.
                                     </p>
+
+                                    <!-- 🔥 Situaciones (accordion auto) -->
+                                    <section class="situaciones">
+                                        <article class="situacion">
+                                            <header class="situacion-header">1. Tengo una idea, pero no sé cómo tatuar
+                                            </header>
+                                            <div class="situacion-body">
+                                                <p>No quiero hacerme algo que no me represente...</p>
+                                            </div>
+                                        </article>
+                                        <article class="situacion">
+                                            <header class="situacion-header">2. Tengo que arreglar una cagada que me
+                                                hice</header>
+                                            <div class="situacion-body">
+                                                <p>Me hice algo hace años y ahora siento que no tiene nada que ver
+                                                    conmigo...</p>
+                                            </div>
+                                        </article>
+                                        <article class="situacion">
+                                            <header class="situacion-header">3. Me da miedo que no quede como quiero
+                                            </header>
+                                            <div class="situacion-body">
+                                                <p>Veo muchos tatuadores en redes, pero no sé quién realmente escucha...
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </section>
+                                    <!-- 🔥 Fin -->
+
                                     <div class="mil-up">
                                         <a href="#" class="mil-services-button mil-button mil-arrow-place wsp-btn">
                                             <span>Contame tu historia</span>
@@ -369,7 +393,6 @@
                     .carousel-container {
                         position: relative;
                         height: 45vh;
-                        /* Menos alto en mobile para que se vea el texto */
                         width: 100%;
                         overflow: hidden;
                     }
@@ -387,26 +410,18 @@
                         opacity: 1;
                     }
 
-                    .carousel-overlay {
+                    /* Label Antes/Después */
+                    .carousel-label {
                         position: absolute;
-                        bottom: 0;
-                        width: 100%;
-                        padding: 20px;
-                        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, transparent 100%);
+                        top: 15px;
+                        right: 15px;
+                        background-color: rgba(0, 0, 0, 0.6);
                         color: #fff;
-                    }
-
-                    .carousel-overlay h3 {
-                        margin: 0 0 8px 0;
-                        font-size: 1.25rem;
+                        padding: 6px 12px;
+                        border-radius: 6px;
                         font-weight: bold;
-                        color: white;
-                    }
-
-                    .carousel-overlay p {
-                        margin: 0;
                         font-size: 0.95rem;
-                        color: #d3d3d3;
+                        transition: all 0.5s ease;
                     }
 
                     /* Desktop */
@@ -415,19 +430,68 @@
                             height: 100vh;
                         }
 
-                        .carousel-overlay h3 {
-                            font-size: 2rem;
-                        }
-
-                        .carousel-overlay p {
-                            font-size: 1.1rem;
+                        .carousel-label {
+                            font-size: 1.2rem;
+                            padding: 8px 16px;
                         }
                     }
+
+                    .situaciones {
+                        margin-bottom: 30px;
+                    }
+
+                    .situacion {
+                        border-left: 3px solid #FF9800;
+                        padding: 12px 15px;
+                        margin-bottom: 15px;
+                        cursor: pointer;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        transition: background 0.3s;
+                        color: black;
+                    }
+
+                    .situacion-header {
+                        font-weight: bold;
+                        font-size: 1.05rem;
+                        color: black;
+                    }
+
+                    .situacion-body {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.6s ease, opacity 0.6s ease;
+                        opacity: 0;
+                        color: black;
+                        font-size: 0.9rem;
+                        margin-top: 5px;
+                    }
+
+                    .situacion.active .situacion-body {
+                        max-height: 200px;
+                        opacity: 1;
+                    }
                 </style>
+
                 <script>
                     document.addEventListener("DOMContentLoaded", () => {
-                        let currentSlide = 0;
                         const slides = document.querySelectorAll(".carousel-slide");
+
+                        // Alternar imágenes de cada slide y actualizar label Antes/Después
+                        slides.forEach(slide => {
+                            const images = slide.dataset.images.split(',');
+                            const label = slide.querySelector('.carousel-label');
+                            let index = 0;
+
+                            setInterval(() => {
+                                index = (index + 1) % images.length;
+                                slide.style.backgroundImage = `url('${images[index]}')`;
+                                label.textContent = index === 0 ? "Antes" : "Después";
+                            }, 4000);
+                        });
+
+                        // Carrusel principal (rotación de slides)
+                        let currentSlide = 0;
                         const totalSlides = slides.length;
 
                         function showSlide(index) {
@@ -439,9 +503,30 @@
                         setInterval(() => {
                             currentSlide = (currentSlide + 1) % totalSlides;
                             showSlide(currentSlide);
-                        }, 4000);
+                        }, 8000);
+
+                        // Acordeón situaciones
+                        const situaciones = document.querySelectorAll(".situacion");
+                        let situIndex = 0;
+
+                        function activar(i) {
+                            situaciones.forEach(s => s.classList.remove("active"));
+                            if (situaciones[i]) {
+                                situaciones[i].classList.add("active");
+                            }
+                        }
+
+                        activar(situIndex); // arranca con la primera
+
+                        setInterval(() => {
+                            situIndex = (situIndex + 1) % situaciones.length;
+                            activar(situIndex);
+                        }, 8000); // sincronizado con el cambio de slides
                     });
                 </script>
+
+
+
 
                 <!-- Quienes Somos -->
                 <section id="nosotros">
@@ -465,13 +550,7 @@
                                             class="mil-services-button mil-button mil-arrow-place mil-arrow-place mil-mb wsp-btn-60 wsp-btn"><span>Contactar</span></a>
                                     </div>
 
-                                    <h4>
-                                        <span class="mil-thin"> Tus ideas, tu cuerpo y tu historia</span> nos
-                                        importan.<br>
-                                        <span class="mil-thin">Nuestro trabajo es traducirlas en </span> tinta, con
-                                        cuidado, criterio y
-                                        atención al detalle.
-                                    </h4>
+
                                 </div>
 
                             </div>
@@ -634,7 +713,7 @@
                                                     </h5>
                                                     <p class="mil-light-soft mil-mb-30">Tengas un diseño claro o solo
                                                         una idea, buscamos entender qué querés contar.</p>
-                                                    <div class="mil-services-button mil-arrow-place-counter" style="width:50px; height:50px; background-color:rgb(255,152,0); color:#fff;
+                                                    <div class="mil-services-button mil-arrow-place-counter" style="width:20px; height:20px; background-color:rgb(255,152,0); color:#fff;
             display:flex; justify-content:center; align-items:center; border-radius:50%;
             font-weight:bold; font-size:18px; cursor:default; transition:none;">
                                                         1

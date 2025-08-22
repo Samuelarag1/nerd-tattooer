@@ -1126,6 +1126,17 @@ spaces
     padding-bottom: 0;
   }
 }
+.mil-p-60-30 {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .mil-p-60-30 {
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+}
 
 .mil-adaptive-right {
   width: 100%;
@@ -5801,9 +5812,9 @@ Responsive Design
   color: #777;
 }
 .card-icon img {
-  width: 70 px;
+  width: 70px;
   /* tamaño del icono */
-  height: 70  px;
+  height: 70 px;
   object-fit: contain;
 }
 .card-icon {
@@ -5984,4 +5995,10 @@ transition: transform 0.5s ease;
 
   transform: scale(1.05);
   transition: transform 0.5s ease;
+}
+.m-10{
+  margin: 50px;
+}
+.text-center{
+  text-align: center;
 }
