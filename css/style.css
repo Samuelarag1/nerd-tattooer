@@ -1128,13 +1128,15 @@ spaces
 }
 .mil-p-60-30 {
   padding-top: 60px;
-  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 @media screen and (max-width: 992px) {
   .mil-p-60-30 {
     padding-top: 45px;
-    padding-bottom: 0;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
 
@@ -6001,4 +6003,18 @@ transition: transform 0.5s ease;
 }
 .text-center{
   text-align: center;
+}
+@media (min-width: 992px) {
+  .mil-service-card-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribuye contenido y número */
+    height: 100%;
+  }
+
+  .mil-arrow-place-counter {
+    margin: 0 auto;
+    /* Lo centra horizontalmente */
+  }
 }
