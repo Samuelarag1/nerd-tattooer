@@ -323,20 +323,28 @@
                                 <!-- 🔥 Título en mobile -->
                                 <h2 class="mil-up mil-mb-30 d-lg-none text-center m-10">¿Te pasa esto?</h2>
 
+                                <!-- Carrusel -->
                                 <div class="carousel-container">
                                     <div class="carousel-slide active"
                                         data-images="./img/situation/situacion-1a.webp,./img/situation/situacion-1b.webp">
+                                        <div class="img-layer"></div>
+                                        <div class="img-layer"></div>
                                         <div class="carousel-label">Antes</div>
                                     </div>
                                     <div class="carousel-slide"
                                         data-images="./img/situation/situacion-2a.webp,./img/situation/situacion-2b.webp">
+                                        <div class="img-layer"></div>
+                                        <div class="img-layer"></div>
                                         <div class="carousel-label">Antes</div>
                                     </div>
                                     <div class="carousel-slide"
                                         data-images="./img/situation/situacion-3a.webp,./img/situation/situacion-3b.webp">
+                                        <div class="img-layer"></div>
+                                        <div class="img-layer"></div>
                                         <div class="carousel-label">Antes</div>
                                     </div>
                                 </div>
+
                             </div>
 
                             <!-- Columna derecha -->
@@ -395,6 +403,30 @@
                         height: 45vh;
                         width: 100%;
                         overflow: hidden;
+                    }
+
+                    .carousel-slide {
+                        position: absolute;
+                        inset: 0;
+                        opacity: 0;
+                        transition: opacity 1s ease-in-out;
+                    }
+
+                    .carousel-slide.active {
+                        opacity: 1;
+                    }
+
+                    .img-layer {
+                        position: absolute;
+                        inset: 0;
+                        background-size: cover;
+                        background-position: center;
+                        opacity: 0;
+                        transition: opacity 1s ease-in-out;
+                    }
+
+                    .img-layer.show {
+                        opacity: 1;
                     }
 
                     .carousel-slide {
@@ -493,17 +525,60 @@
                         // Carrusel principal (rotación de slides)
                         let currentSlide = 0;
                         const totalSlides = slides.length;
+                        let imageIndex = 0;
+                        let imageInterval;
 
                         function showSlide(index) {
                             slides.forEach((slide, i) => {
                                 slide.classList.toggle("active", i === index);
+                                if (i === index) {
+                                    startImageRotation(slide);
+                                }
                             });
                         }
 
-                        setInterval(() => {
+                        function startImageRotation(slide) {
+                            clearInterval(imageInterval);
+                            const images = slide.dataset.images.split(",");
+                            const layers = slide.querySelectorAll(".img-layer");
+                            const label = slide.querySelector(".carousel-label");
+                            imageIndex = 0;
+
+                            // Inicializar capas
+                            layers[0].style.backgroundImage = `url('${images[0]}')`;
+                            layers[1].style.backgroundImage = `url('${images[1]}')`;
+
+                            // Mostrar solo la primera al arrancar
+                            layers[0].classList.add("show");
+                            layers[1].classList.remove("show");
+                            label.textContent = "Antes";
+
+                            imageInterval = setInterval(() => {
+                                imageIndex = (imageIndex + 1) % images.length;
+                                const nextLayer = layers[imageIndex % 2];
+                                const prevLayer = layers[(imageIndex + 1) % 2];
+
+                                // Actualizar imagen de la capa que va a entrar
+                                nextLayer.style.backgroundImage = `url('${images[imageIndex]}')`;
+
+                                // Fade: entra la nueva capa y sale la anterior
+                                nextLayer.classList.add("show");
+                                prevLayer.classList.remove("show");
+
+                                // Actualizar label
+                                label.textContent = imageIndex === 0 ? "Antes" : "Después";
+                            }, 4000);
+                        }
+
+                        // Carrusel principal
+                        function nextSlide() {
                             currentSlide = (currentSlide + 1) % totalSlides;
                             showSlide(currentSlide);
-                        }, 8000);
+                        }
+
+                        // Iniciar
+                        showSlide(currentSlide);
+                        setInterval(nextSlide, 8000);
 
                         // Acordeón situaciones
                         const situaciones = document.querySelectorAll(".situacion");
@@ -516,14 +591,15 @@
                             }
                         }
 
-                        activar(situIndex); // arranca con la primera
-
+                        activar(situIndex);
                         setInterval(() => {
                             situIndex = (situIndex + 1) % situaciones.length;
                             activar(situIndex);
-                        }, 8000); // sincronizado con el cambio de slides
+                        }, 8000);
                     });
                 </script>
+
+
 
 
 
