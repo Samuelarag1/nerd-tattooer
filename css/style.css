@@ -912,7 +912,9 @@ backgrounds
 .mil-dark-bg {
   position: relative;
 }
-
+.mil-method-bg{
+  background-color: #000000;
+}
 .mil-dark-bg:before {
   content: "";
   width: 100%;
